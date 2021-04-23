@@ -1,0 +1,32 @@
+<div class="column is-4 article-box">
+	<a href="{{ post.url }}" style="color: #4a4a4a;">
+
+		<div class="card">
+			{% if post.header.featured_image %}
+
+				<div class="card-image">
+					<figure class="image">
+						{{ post.media[post.header.featured_image].cropZoom(432, 224).html('',post.title|escape)}}
+					</figure>
+				</div>
+			{% endif %}
+
+			<div class="card-content">
+				<h3 class="title is-4">{{ post.title }}</h3>
+
+				<div class="content">
+					{% if post.header.intro %}
+						{{ post.header.intro|markdown }}
+					{% else %}
+						{{ post.summary(120) }}
+					{% endif %}
+				</div>
+			</div>
+
+			<footer class="card-footer">
+				<a href="{{ post.url }}" class="card-footer-item">Weiter lesen</a>
+			</footer>
+
+		</div>
+	</a>
+</div>

@@ -1,0 +1,68 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+	<section class="section">
+		<div class="container">
+			<div class="columns is-centered">
+				<div class="column is-8">
+
+					<div class="content">
+						<h1>
+							{{ page.title }}
+						</h1>
+
+						{% if page.header.intro %}
+							<div class="intro">
+								{{ page.header.intro|markdown }}
+							</div>
+						{% endif %}
+
+						{% if page.header.featured_image %}
+							<figure class="image " style="margin-left: 0; margin-right: 0;">
+								{{ page.media[page.header.featured_image].html('',page.title|escape)}}
+							</figure>
+						{% endif %}
+
+						{{ page.content }}
+					</div>
+
+					{% if page.header.taxonomy.tag %}
+						<div class="tags">
+							{% for tag in page.header.taxonomy.tag %}
+								<span class="tag">
+									{{ tag }}
+								</span>
+							{% endfor %}
+						</div>
+					{% endif %}
+
+					<!--<small class="is-italic is-size-10 has-text-grey">
+						Veröffentlicht am
+						{{ page.header.publish_date|date("d.m.Y") }}
+					</small>-->
+
+				</div>
+			</div>
+
+			<div class="columns is-centered">
+				<div class="column is-8 article-nav">
+
+					<div class="is-pulled-left">
+						{% if not page.isFirst %}
+							<a href="{{ page.nextSibling.url }}">&lt; Nächster Artikel</a>
+						{% endif %}
+					</div>
+
+					<div class="is-pulled-right">
+						{% if not page.isLast %}
+							<a href="{{ page.prevSibling.url }}">Vorheriger Artikel  &gt;</a>
+						{% endif %}
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>{% endblock %}

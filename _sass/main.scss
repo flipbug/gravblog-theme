@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// Update the sans-serif font family
+@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display&display=swap");
+
+$family-sans-serif: "IBM Plex Sans", "Nunito", "Helvetica", "Arial", sans-serif;
+
+$family-primary: "Lora", serif;
+$family-header: "Playfair Display", serif;
+$size-normal: 1.5rem;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+
+$primary: #73ab83;
+$primary-light: #a7cab1;
+$secondary: #cde7d0;
+$secondary-light: #f6fbf6;
+
+$hero-color: #fff;
+$light-grey: #e4e4e4;
+
+$box-radius: 0;
+$background: #fffffe;
+$scheme-main: $background;
+$text: #2e2e2e;
+
+$body-background-color: $background;
+$box-background-color: $background;
+
+$link: $primary;
+$link-hover: $primary-light;
+
+$navbar-height: 6rem;
+$navbar-background-color: transparent;
+
+// $body-font-size: 1.15em;
+
+// 4. Import the rest of Bulma
+
+@import "../node_modules/bulma/bulma";
+
+p {
+  font-size: 1.2rem;
+}
+
+.intro p {
+  font-size: 1.4rem;
+}
+
+/*.home .navbar-brand{
+    display: none;
+}*/
+
+.navbar-brand {
+  font-weight: bold;
+}
+
+.home-intro {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+
+.hero-body {
+  padding-top: 4rem !important;
+  padding-bottom: 4rem !important;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: $family-header;
+}
+
+.navbar-item {
+  font-size: 1.2em;
+}
+
+.has-dropdown .has-dropdown .navbar-link {
+  padding-left: 0;
+}
+
+.logo {
+  margin-right: 10px;
+}
+// Homepage
+
+.icon-background {
+  opacity: 0.05;
+  padding: 20px;
+}
+
+//.home .hero {
+// background: linear-gradient(141deg, #FE791F 0%, #FEF06B 71%, #FFAF35 100%) !important;
+
+/*@include desktop {
+        background: url("/user/themes/enereg/images/sun.jpeg") top center !important;
+    }   */
+//}
+
+.content {
+  h1 {
+    margin-bottom: 1.25em;
+    font-size: 2.5rem;
+  }
+
+  .intro {
+    margin-bottom: 2rem;
+  }
+}
+
+.article-nav {
+    padding-top: 5rem;
+    font-size: 1.2rem;
+}
+
+.post {
+  padding: 1.25rem;
+}
+
+h3.post-title {
+  margin-bottom: 5px;
+}
+
+.post-date {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.media .content figure {
+  margin-left: 0;
+  margin-right: 0;
+}

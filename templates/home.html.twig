@@ -1,0 +1,52 @@
+{% extends 'partials/base.html.twig' %}
+
+{% block content %}
+
+	<section class="hero is-medium is-bold">
+		<div class="hero-head"></div>
+		<div class="hero-body">
+
+			<div class="container">
+				<div class="columns">
+					<div class="column is-6-desktop is-offset-1 home-intro">
+						<h1 class="title is-2 is-spaced">{{ page.header.custom.hometitle }}</h1>
+						<h2 class="subtitle is-3">{{ page.header.custom.homesubtitle }}</h2>
+					</div>
+
+					<div class="column is-4-desktop">
+						<figure class="image">
+							{{ page.media[page.header.featured_image].cropZoom(432, 324).html('',page.header.custom.homesubtitle|escape)}}
+						</figure>
+					</img>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</section>
+
+{% if page.content %}
+
+	<section class="section">
+		<div class="container content">
+			{{ page.content }}
+		</div>
+	</section>
+
+{% endif %}
+
+<section class="section">
+	<div class="container">
+		<div class="columns">
+			{% for post in page.find('/blog').children.order('publish_date', 'desc') %}
+				{% include 'partials/post.html.twig' %}
+
+				{% if loop.index % 3 == 0 %}
+				</div>
+				<div class="columns">
+				{% endif %}
+
+			{% endfor %}
+		</div>
+	</div>
+</section>{% endblock %}
