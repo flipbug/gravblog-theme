@@ -6959,7 +6959,7 @@ label.panel-block {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
-p {
+p, center {
   font-size: 1.2rem; }
 
 .intro p {
