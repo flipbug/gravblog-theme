@@ -23,10 +23,10 @@ $size-normal: 1.5rem;
 // 3. Set the derived variables
 // Use the new pink as the primary color
 
-$primary: #73ab83;
-$primary-light: #a7cab1;
-$secondary: #cde7d0;
-$secondary-light: #f6fbf6;
+$primary: #009296;
+$primary-light: #06edf5;
+$secondary: #00d8c4;
+$secondary-light: #71fff1;
 
 $hero-color: #fff;
 $light-grey: #e4e4e4;
@@ -67,10 +67,13 @@ center {
 body {
   background: linear-gradient(1deg, #0584b1 0%, #00d8c4 71%, #2dd0d6 100%) !important;
 
-  .title,
-  .subtitle {
-    color: #fff !important;
+  .hero {
+    .title,
+    .subtitle {
+      color: #fff !important;
+    }
   }
+
   .navbar-item {
     color: #fff;
 
@@ -118,6 +121,20 @@ h2,
 h3,
 h4 {
   font-family: $family-header;
+  color: $primary;
+}
+
+.content {
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: $primary;
+  }
+}
+
+.title {
+    color: $primary;
 }
 
 .navbar-item {
