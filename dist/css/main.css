@@ -6984,8 +6984,9 @@ body {
   body .hero img {
     border-radius: 50%;
     background-size: cover;
-    width: 300px;
-    height: 300px; }
+    width: 350px;
+    height: 350px;
+    border: 8px white solid; }
 
 .section {
   background: #fff; }
