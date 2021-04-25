@@ -9,12 +9,8 @@
 @import "../node_modules/bulma/sass/utilities/initial-variables";
 
 // Update the sans-serif font family
-@import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
-@import url("https://fonts.googleapis.com/css?family=IBM+Plex+Sans&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display&display=swap");
-
-$family-sans-serif: "IBM Plex Sans", "Nunito", "Helvetica", "Arial", sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap');
 
 $family-primary: "Lora", serif;
 $family-header: "Playfair Display", serif;
@@ -63,6 +59,10 @@ center {
 /*.home .navbar-brand{
     display: none;
 }*/
+
+hr {
+  background: linear-gradient(1deg, #0584b1 0%, #00d8c4 71%, #2dd0d6 100%) !important;
+}
 
 body {
   background: linear-gradient(1deg, #0584b1 0%, #00d8c4 71%, #2dd0d6 100%) !important;
@@ -134,7 +134,7 @@ h4 {
 }
 
 .title {
-    color: $primary;
+  color: $primary;
 }
 
 .navbar-item {
@@ -172,6 +172,11 @@ h4 {
   .intro {
     margin-bottom: 2rem;
   }
+}
+
+.home-text {
+    padding: 5rem 0;
+    font-weight: 300;
 }
 
 .article-nav {
